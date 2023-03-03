@@ -8,6 +8,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@babel/parser": "^7.21.2",
+    "@babel/types": "^7.21.2",
+    "babel-loader": "^9.1.2",
     "nuxt": "^3.2.0"
   },
   "dependencies": {
