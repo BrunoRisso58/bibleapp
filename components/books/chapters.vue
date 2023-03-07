@@ -1,13 +1,11 @@
 <script setup>
-defineProps({
-    bookId: Number
-})
+import { useStore } from 'vuex';
 
-const route = useRoute();
+const store = useStore();
 
-console.log(route.params)
+const bookId = computed(() => store.getters.getBookId)
 </script>
 
 <template>
-    <h1>Testing</h1>
+    <h1>{{ bookId }}</h1>
 </template>

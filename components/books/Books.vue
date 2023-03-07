@@ -1,10 +1,14 @@
 <script setup>
 import { useStore } from 'vuex';
+const store = useStore();
 
 const { data: otBooks } = await getOTBooks();
 const { data: ntBooks } = await getNTBooks();
 
 const handleChoice = (bookId, bookName) => {
+    // const updateBookId = () => {
+    store.dispatch('updateBookId', bookId);
+    // }
     let formattedName = bookName.toLowerCase().replaceAll(' ', '');
     navigateTo(`/read/${formattedName}-${bookId}`)
 }
