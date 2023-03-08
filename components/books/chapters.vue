@@ -1,11 +1,11 @@
 <script setup>
-import { useStore } from 'vuex';
+import store from '@/plugins/vuex.js';
 
-const store = useStore();
+console.log(store)
 
-const bookId = computed(() => store.getters.getBookId)
+console.log(store.state.bookId)
 </script>
 
 <template>
-    <h1>{{ bookId }}</h1>
+    <h1>{{ store.state.bookId }}</h1>
 </template>
